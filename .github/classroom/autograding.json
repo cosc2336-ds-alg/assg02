@@ -2,13 +2,13 @@
   "tests": [
     {
       "name": "test successfully builds",
-      "setup": "./configure",
+      "setup": "make clean",
       "run": "make",
       "input": "",
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 10
+      "points": 25
     },
     {
       "name": "task 1 Add initial stub function",
@@ -18,7 +18,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 15
+      "points": 25
     },
     {
       "name": "task 2 test addItem() member function",
@@ -28,7 +28,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 15
+      "points": 10
     },
     {
       "name": "task 3 test addItem() handles duplicate items",
@@ -38,7 +38,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 15
+      "points": 10
     },
     {
       "name": "task 4 test removeItem() member function",
@@ -48,7 +48,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 15
+      "points": 10
     },
     {
       "name": "task 5 test operatorUnion() member function",
@@ -58,7 +58,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 15
+      "points": 10
     },
     {
       "name": "task 6 test operatorIntersect() member function",
@@ -68,7 +68,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 15
+      "points": 10
     }
   ]
 }

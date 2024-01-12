@@ -1,7 +1,7 @@
 ---
 title: 'Assignment Classes and User Defined Data Types'
 author: 'COSC 2336: Data Structures and Algorithms'
-date: 'Fall 2021'
+date: 'Spring 2024'
 ---
 
 
@@ -36,7 +36,7 @@ using and adding code to for this assignment.
 
 | File Name          | Description                                                                                 |
 |--------------------|---------------------------------------------------------------------------------------------|
-| `src/test-Set.cpp` | Unit tests for the Set class you are to implement.                                          |
+| `src/assg02-tests.cpp` | Unit tests for the Set class you are to implement.                                          |
 | `include/Set.hpp`  | Header file for the declarations of the `Set` class and its member functions and variables. |
 | `src/Set.cpp`      | Implementation file for the member functions of your `Set` class.                           |
 
@@ -49,12 +49,12 @@ finish the following setup steps.
    'Assignment Classes and User Defined Data Types' for our current
    class semester and section.
 2. Clone the repository to your DevBox using the SSH URL to your local
-   class DevBox development environment.
-3. Configure the project by running the `configure` script from a terminal.
-4. Confirm that the project builds and runs, though no tests may be
+   class DevBox development environment.  Make sure that open the cloned
+   folder and restart inside of the correct Dev Container.
+3. Confirm that the project builds and runs, though no tests may be
    defined or run initially.  If the project does not build on the first
    checkout, please inform the instructor.
-5. You should create the issue for Task 1 and/or for all tasks for the assignment
+4. You should create the issue for Task 1 and/or for all tasks for the assignment
    now before beginning the first task.  On your GitHub account, go to issues,
    and create them from the issue templates for the assignment. Also make sure
    you link the issue(s) with the `Feedback` pull request.
