@@ -11,7 +11,7 @@ assignees: ''
 
 The second task is to give an initial implementation of the `addItem()` class member function.  This function is a `void` function, it does not return an explicit result.  It does change the `Set` implicitly by adding the indicated item into the set.  Thus this function is not a `const` member function like the previous functions since it modifies the `Set`.  This function takes an `int` parameter as input, which is the integer item to be added to the set.
 
-In addition, when adding the implementation of `addItem()` you are also required to fix the stubs implementation to actually work in this task.  You do this by correctly implementing `addItem()` so that you have the information you need to return and implement the first 4 stub information methods.
+In addition, when adding the implementation of `addItem()` you are also required to fix the stub implementations to actually work in this task.  You do this by correctly implementing `addItem()` so that you have the information you need to return and implement the first 4 stub information methods.
 
 **Suggested Solution**
 

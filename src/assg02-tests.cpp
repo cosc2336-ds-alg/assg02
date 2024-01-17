@@ -194,6 +194,22 @@ TEST_CASE("<addItem> test adding duplicate items", "[task3]")
     
     CHECK(s.str() == "[ 5 9 -1 42 ]");
   }
+
+  SECTION("test adding a new unique item is still working")
+  {
+    s.addItem(28);
+
+    CHECK_FALSE(s.isEmpty());
+    CHECK(s.getSetSize() == 5);
+
+    CHECK(s.containsItem(5));
+    CHECK(s.containsItem(9));
+    CHECK(s.containsItem(-1));
+    CHECK(s.containsItem(42));
+    CHECK(s.containsItem(28));
+
+    CHECK(s.str() == "[ 5 9 -1 42 28 ]");
+  }
 }
 #endif
 

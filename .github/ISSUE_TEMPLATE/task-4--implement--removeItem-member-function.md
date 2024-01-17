@@ -9,7 +9,7 @@ assignees: ''
 
 **Description**
 
-Implement the `removeItem()` member function to allow removal of existing items from the set.  As with `addItem()`, `removeItem()` should simply silently ignore a request to remove an item that is not already in the set.  You are required to reuse `containsItem()` to do this check again in your implementaiton of `removeItem()`.  Otherwise when removing an item, you need to maintain the array of items in your `Set` class so that it has no holes or missing values in the array.  This means you will be required to find the item to be removed, then to shift any items down 1 position in order to remove the requested item from the set.
+Implement the `removeItem()` member function to allow removal of existing items from the set.  As with `addItem()`, `removeItem()` should simply silently ignore a request to remove an item that is not already in the set.  You are required to reuse `containsItem()` to do this check again in your implementation of `removeItem()`.  Otherwise when removing an item, you need to maintain the array of items in your `Set` class so that it has no holes or missing values in the array.  This means you will be required to find the item to be removed, then to shift any items down 1 position in order to remove the requested item from the set.
 
 **Suggested Solution**
 

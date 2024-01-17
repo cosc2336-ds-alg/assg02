@@ -16,7 +16,7 @@ This function takes another `Set` as an input parameter and modifies this `Set` 
 
 **Suggested Solution**
 
-You are required to reuse the `Set` member function in implementing your union operation.  The suggested solution is to iterate over all of the items in the other set given as input, and call `addItem()` for every item in the other set to add each item to this set.  Since `addItem()` should ignore request to add duplciate items, the result will be that any items in the other set not already in this set will be added to this set, thus giving the union between the two sets as the result.
+You are required to reuse the `addItem()` `Set` member functions in implementing your union operation.  The suggested solution is to iterate over all of the items in the other set given as input, and call `addItem()` for every item in the other set to add each item to this set.  Since `addItem()` should ignore request to add duplciate items, the result will be that any items in the other set not already in this set will be added to this set, thus giving the union between the two sets as the result.
 
 **Additional Requirements**
 

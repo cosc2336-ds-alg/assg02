@@ -47,14 +47,11 @@ public:
   // constructors and destructors
   Set();
 
-  // declarations/prototypes of accessor methods for information go here
-
-
-  // setters and getter declarations go here
+  // declarations/prototypes of accessor and getter methods
 
   // actual work of the set, adding and removing items
 
-  // set operations like set intersection and set union declared here
+  // set operations like set intersection and set union
 };
 
 #endif // _SET_H_

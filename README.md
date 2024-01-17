@@ -44,13 +44,11 @@ using and adding code to for this assignment.
 As usual, before starting on the assignment tasks proper, you will need to
 finish the following setup steps.
 
-1. Accept the assignment invitation and copy the assignment repository
-   on GitHub using the provided assignment invitation link for the
-   'Assignment Classes and User Defined Data Types' for our current
-   class semester and section.
-2. Clone the repository to your DevBox using the SSH URL to your local
-   class DevBox development environment.  Make sure that open the cloned
-   folder and restart inside of the correct Dev Container.
+1. Accept the assignment invitation and create your assignment repository
+   on GitHub.
+2. Clone the repository to your DevBox using the SSH URL.  Make sure
+   that you open the cloned folder and restart inside of a linux Dev
+   Container.
 3. Confirm that the project builds and runs, though no tests may be
    defined or run initially.  If the project does not build on the first
    checkout, please inform the instructor.
@@ -73,56 +71,59 @@ functions that don't yet work completely.  We will implement these stub
 functions more fully as we continue working on implementing the full 
 functionality of the `Set` data type.
 
-Start by uncommenting the first test case in the `test-Set.cpp` file.  This
-test case tries to test the `isEmpty()` member function.  Initially when
-a new `Set` is created, it will be empty, e.g. it will contain no items
-when first created.  So we can create a "stub" `isEmpty()` function that
-simply returns `true` initially, since it will be true that sets are
-initially empty.  Uncomment the first test case, and create a stub
-`isEmpty()` function that simply returns `true`.  To create the function,
-you need to declare it in the `Set.hpp` header file.  The `isEmpty()`
-function should return a `bool` result, and it takes no parameters as input.
-Also, the `isEmpty()` member function should be a `const` member function, because
-this function only returns information about the `Set`, it does not change the
-set.  You declare a member function to be a `const` member function by putting
-the `const` keyword at the end of the function declaration.  Once you declare
-your function in `Set.hpp`, you also need to add an implementation of the
-function into the `Set.cpp` implementation file.  Make sure that you indicate 
-this function is a member of the `Set` class by prepending the name of the
-functions with `Set::`.  You should initially simply return `true` as
-the implementation of this function.
+Start by defining the first test `task1_1` in the `assg02-tests.cpp`
+file.  This test tries to call an `isEmpty()` member function of a
+`Set` instance.  Initially when a new `Set` is created, it will be
+empty.  So we can create a "stub" `isEmpty()` member function that
+simply returns `true`, since it will be true that sets are initially
+empty.  Define `task1_1`, and create a stub `isEmpty()` function that
+simply returns `true`.  To create the function, you need to declare it
+in the `Set.hpp` header file.  The `isEmpty()` function should be a
+`public` function that returns a `bool` result, and takes no
+parameters as input.  Also, the `isEmpty()` member function should be
+a `const` member function, because this function only returns
+information about the `Set`, it does not change the set.  You declare
+a member function to be a `const` member function by putting the
+`const` keyword at the end of the function declaration.  Once you
+declare your function in `Set.hpp`, you also need to add an
+implementation of the function into the `Set.cpp` implementation file.
+Make sure that you indicate this function is a member of the `Set`
+class by prepending the name of member functions with `Set::`.  You
+should initially just return `true` as the implementation of this
+function.
 
 Once you get the `isEmpty()` function added and the test passing, do the same
 to create stub functions for the `getSetSize()`, `containsItem()` and 
-`str()` member functions.  Uncomment each test case, add the stub function,
-and check that the test case passes with your stub function compiling and running.
+`str()` member functions.  Define each subtask, add the stub function,
+and check that the code compiles and the test case passes.
 
-All of these functions are returning information about the `Set`.  The `getSetSize()`
-returns the number of items currently in the set.  So it should return an `int` result,
-and should initially be stubbed out to return 0 since initially sets will be
-empty and thus will have a size of 0.  This function is a `const` member function,
-so you need to declare it as such when you implement it.
+All of these functions are returning information about the `Set`.  The
+`getSetSize()` returns the number of items currently in the set.  So
+it should return an `int` result, and should initially be stubbed out
+to return 0 since sets will start out empty and thus will have a
+size of 0.  This function is a `const` member function, so you need to
+declare it as such when you implement it.
 
 The `containsItem()` member function will return a boolean result of `true` if
 the item it is asked about is currently in the set, and `false` if it is
 not.  Thus `containsItem()` returns a `bool` result.  This function, however, 
 has an input parameter, an `int` value which is the item that we should
-check if it is in the set or not.  Like before, this method is an informational
+check to see if it is in the set or not.  Like before, this method is an informational
 method, so it should be declared as a `const` member function.
 
-Finally the `str()` method will return a `string` representation of the
-current items in the set, so this method should return a value of type `string`.
-This method takes no input parameters, but it is again a `const` member
-function.  This method should initially return a string with the value
-"[ ]" (notice the space between the two square brackets).  Later on the
-items that are currently in the set will need to be put into the string that
-is returned from this method.
+Finally the `str()` method will return a `string` representation of
+the current items in the set, so this method should return a value of
+type `string`.  This method takes no input parameters, but it is again
+a `const` member function.  This method should initially return a
+string with the value "[ ]" (notice the space between the two square
+brackets).  Later on the items that are currently in the set will need
+to be put into the string that is returned from this method.
 
 For practice you might want to make a commit once you have each
 individual stub function implemented and passing its small unit tests.
-At a minimum, you need to make at least 1 commit before moving on to the
-next task that has all 4 of these informational stub functions implemented
-and their tests passing.
+At a minimum, you need to make at least 1 commit before moving on to
+the next task that has all 4 of these informational stub functions
+implemented and their tests passing.
 
 ## Task 2: Implement `addItem()` Member Function
 
@@ -132,12 +133,12 @@ and `str()` that return default values. Now we will implement a
 function that will need you to do some real work to implement it and
 the previous stubbed out functions.
 
-Uncomment the next test case that tests the `addItem()` member
-function.  This is a `void` function, it does not return a result.
-But `addItem()` does take an input parameter, an `int` which is the
-item to be added to the set.  Unlike the previous methods, the
-`addItem()` function will actually be modifying the set, so it should
-not be a `const` member function this time.
+Define the task 2 in the assg02 tests file.  This test case tests the
+`addItem()` member function.  This is a `void` function, it does not
+return a result.  But `addItem()` does take an input parameter, an
+`int` which is the item to be added to the set.  Unlike the previous
+methods, the `addItem()` function will actually be modifying the set,
+so it should not be a `const` member function this time.
 
 Write a stub function that does nothing, and make sure your code still
 compiles.  If your code compiles it should still be passing the
@@ -189,42 +190,42 @@ the `addItem()` member function.  Check that all of the tests in the
 next section pass as well after adding 3 more items, and fix any
 issues/bugs if these tests are not passing before moving on.
 
-Once you are satisfied that your `addItem()` works correctly for the
-first test case of this member function, and that all of the information
-methods are working now as well, you should commit and push your
+Once you are satisfied that your `addItem()` and all the implemented
+accessor methods are working, you should commit and push your
 changes to the `Feedback` pull request of your repository.  Remember
 that you are required to have at least 1 commit for each task, so you
 need to push a commit here of your implementation of `addItem()` that
-works when inserting non-duplicate items.
+works when inserting non-duplicate items.  As usual, make sure that
+you check the autograder on GitHub for this commit.
 
 ## Task 3: Fix `addItem()` to Handle Duplicate Items
 
-By definition a set contains only a unique collection of the items,
-there should be no repetitions or duplications of items in the
-representation of the set.  However, if you implemented your
-`addItem()` function as suggested so far, it will not behavior
-as a proper `Set`.  If you add a duplicate item and then look at
-your set (for example using the `str()` method), you will see
-that the duplicate item occurs multiple times, and that the set size
-counts the duplicates.
+By definition a set contains a unique collection of the items, there
+should be no duplications of items in the sset.  However, if you
+implemented your `addItem()` function as suggested, it will not behave
+as a proper `Set`.  If you add a duplicate item and then look at your
+set (for example using the `str()` method), you will see that the
+duplicate item occurs multiple times, and that the set size counts the
+duplicates.
 
 In this task we need to modify/fix this bug so that the `Set` is
-properly maintained to contain only a unique collection of the items
-added to the `Set`.  Uncomment the next test case.  This test case is
-still testing the `addItem()` member function.  But here we test that
-if you add a duplicate item to the set, nothing happens and only 1
-unique value of each integer item is kept and represented in the set.
+properly maintained to contain only a unique collection of the items.
+Define the task 3 tests.  This test case is still testing the
+`addItem()` member function, so you don't need to add a new function for
+task 3.  But here we test that if you add a
+duplicate item to the set, nothing happens and only 1 unique value of
+each integer item is kept in the set.
 
 You should implement this behavior using the following algorithm.  You
-should reuse your hopefully now working `containsItem()` member
-function.  So before you actually add the item into your `setItem`
-array, first check whether or not the set already contains the item
-by calling `containsItem()`.  If you already have the item, you can
-just return immediately and do nothing.  Only if the item is not
-already in the set should you then proceed to add it to the end of the
-array of your items in the set. If you implement this correctly, all
-of the tests of adding duplicate items should now be passing in this
-test case.
+should reuse your now working `containsItem()` member function.
+Before you actually add the item into your `setItem` array, you will
+first check whether or not the set already contains the item by
+calling `containsItem()`.  If you already have the item, you can just
+return immediately and do nothing (i.e. silently ignore the request to
+add a duplicate item).  Only if the item is not already in the set
+should you then proceed to add it to the end of the array of your set
+items. If you implement this correctly, all of the tests of adding
+duplicate items should now be passing in this test case.
 
 Notice that you are required to reuse the `containsItem()`
 member method here.  You could write a loop again to check if
@@ -246,12 +247,12 @@ In the remaining tasks, we will add more common functionality to
 our `Set` data type.  To be useful, we need to be able to also
 remove items from our set.
 
-Uncomment the next test case to test the `removeItem()` member
-functions.  As usual first create a stub function that does nothing,
+Define the task 4 to test the `removeItem()` member
+function.  As usual first create a stub function that does nothing,
 and make sure your code still compiles and still passes all of the
 unit tests up to this point.  The `removeItem()` member function
 is a `void` member function, but it takes an `int` parameter as
-input which is the item to search for and remove from the set.
+input, which is the item to search for and remove from the set.
 
 The `removeItem()` should simply silently do nothing if asked to
 remove an item that is not in the set.  You can do this again by first
@@ -278,22 +279,23 @@ request of your repository.
 
 ## Task 5: Implement `operatorUnion()` Member Function
 
-Set union and intersection are fundamental operations that most
-users of your `Set` will expect you to support.  The union of
-two sets is a new set that contains all of the items either in
-set 1 or set 2 (or in both of them).  We don't quite have all of
-the tools yet to create and return a new `Set` dynamically, so we 
-will implement the union of two sets by passing a `Set` into
-this member function and updating this `Set` to add in any
-items from the other set that don't already exist in this set.
+Set union and intersection are fundamental operations that most users
+of your `Set` will expect you to support.  The union of two sets is a
+new set that contains all of the items either in set 1 or set 2 (or in
+both of them).  We don't quite have all of the tools yet to create and
+return a new `Set` dynamically, so we will implement the union of two
+sets by passing a `Set` into this member function and updating this
+`Set` to add in any items from the other set that don't already exist
+in this set.  The result is that this `Set` (that we call
+`operatorUnion()` on) will actually be modified to be the union of the
+original 2 sets.
 
-Uncomment the first test case below the fixture class to test your
+Define the task 5 tests in order to develop and test the
 `operatorUnion()` member function.  As usual you should create a stub
 function and make sure you code compiles, runs and passes all of the
-tests you had been passing previously.  The union operation will take
-a `otherSet` as a parameter and the result will be the union of the
-two sets ends up in the set you call the `operatorUnion()` member
-function on.
+previous tests. The union operation will take a `otherSet` as a
+parameter and the result will be the union of the two sets that ends
+up in the set you call the `operatorUnion()` member function on.
 
 The algorithm for the `operatorUnion()` is relatively simple.  You
 should iterate over all of the items in the `otherSet` and call your
@@ -302,14 +304,12 @@ own `addItem()` to add each item of the `otherSet`.  If your
 is already in the set, but it will add the item that it doesn't have
 from the other set if it is missing.  Note that you are required to
 reuse `addItem()` here in your implementation of `operatorUnion()`.
-The result of doing this is the union of the two sets.  You should be
-able to pass all of the tests in the first unit test with this
-algorithm.  Also if you have done things correctly in your
-`operatorUnion()` function, you can uncomment all of the next 3 unit
-tests that test the union operator on empty sets and other edge
-conditions.  Hopefully if your implementation is complete and correct,
-all of these will be passing.  If not you will need to debug your
-algorithm and fix your union operator.
+The result of doing this is the union of the two sets.
+
+Note it is required that the `otherSet` be passed in as a reference
+parameter.  This is done for performance reasons.  But since the 
+`otherSet` should not be modified when the union operation is
+performed, it should be passed in as a `const` parameter.
 
 Once you are satisfied with your work, add and commit your work on the
 `operatorUnion()` function and push them to the `Feedback` pull
@@ -322,19 +322,19 @@ To complete our `Set` data type we also need an intersection
 operation.  The intersection of two sets is defined as only
 those items that appear in both sets.
 
-Uncomment the first test case for the `operatorIntersect()` member
-function.  Again start by creating a stub function and making sure
-your code still compiles, runs and is still passing all of the tests
-up to this point.
+Define the task 6 tests to enable the unit tests for the
+`operatorIntersect()` member function.  Again start by creating a stub
+function and making sure your code still compiles, runs and is still
+passing all of the tests up to this point.
 
 The intersection operation is a bit more tricky than the union
 operation.  To implement intersection you will have to remove any item
 in the set that is not also in the other set.  There are many
 different ways you could accomplish this.  My recommendation is that
-you implement this in the following way.  Iterate backwards through
-your items in your `setItem` array, e.g. start with the last item and
+you implement this in the following way.  Iterate **BACKWARDS** through
+your items in THIS `setItem` array, e.g. start with the last item and
 work backwards to the item at index 0.  For each item test if it is in
-the `otherSet` by calling the `containsItem()` member function of the
+the `otherSet` by calling the `containsItem()` member function on the
 other set.  If the item is not also in the other set, you need to
 remove it from your set.  Do this by calling your own `removeItem()`
 member function to remove the item.  The reason why you work backwards
@@ -342,23 +342,17 @@ through your items is because, if you do so, you will not get messed
 up by by your `removeItem()` implementation shifting items in the
 array.  Only items you have already checked will get shifted down.
 
-Once you can pass the tests in the first unit test of the
-`operatorIntersect()` uncomment the next 3 tests and make sure you are
-passing all of them as well.  If any tests are failing, you will need
-to debug your `operatorIntersect()` implementation to get them to
-pass.
-
 As usual, when finished with this task, add and commit your changes
 and push them to the `Feedback` pull request of your class
 repository.  This is the final task of this assignment.
    
 If you have gotten all of the tasks completed to this point, you
-should be able to run and pass all of the original tests once 
-your intersect and union operators are implemented.  When satisfied
-you should commit and push your changes.  Check your final GitHub
-actions at this point.  If your work is committed correctly, you
-should see you now get a green check mark and your most recent action
-passes all actions on the GitHub classroom repository now.
+should be able to run and pass all of the original tests once your
+intersect and union operators are implemented.  When satisfied you
+should commit and push your changes.  Check your final GitHub actions
+and autograder at this point.  If your work is committed correctly,
+you should see you now get a green check mark on all tests and
+the autograder gives a score of 100/100.
 
 
 # Assignment Submission
@@ -374,9 +368,9 @@ building and able to run the tests.  You may loose points for pushing
 a broken build, especially if the last build you submit is not
 properly compiling and running the tests.
 
-In this problem, up to 25 points will be given for having at least 1
+In this problem, up to 50 points will be given for having at least 1
 commit that compiles and runs the tests (and at least some attempt was
-made to work on the first task).  Thereafter 15 points are awarded for
+made to work on the first task).  Thereafter 10 points are awarded for
 completing each of the tasks.  However you should note that the
 autograder awards either all point for passing all tests, or no points
 if any test is failing for one of the tasks.  Also note that even if

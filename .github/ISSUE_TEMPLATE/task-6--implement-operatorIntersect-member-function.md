@@ -18,11 +18,11 @@ This function takes another `Set` as an input parameter and modifies this `Set` 
 
 The algorithm for the intersection is a bit trickier than the union operation.  It is suggested you do the following
 
-1. Iterate backwards through the items in this set (e.g. the `setItem` array)
+1. Iterate **BACKWARDS** through the items in this set (e.g. the `setItem` array)
    - For each item, check if it is in the other set by calling `containsItem()` for the item on the
      other set.
    - If the item is in the other set then you don't have to do anything because that means it is in both this set and the other set, so it should remain in the calculated set intersection.
-   - But if `containsItem()` returns `false` then the item is not in both sets, so needs to be removed from the intersection you are calculation.  You should reuse `removeItem()` to remove the item from this set in the case it is not in the intersection.
+   - But if `containsItem()` returns `false` then the item is not in both sets, so needs to be removed from the intersection you are calculating.  You should reuse `removeItem()` to remove the item from this set in the case it is not in the intersection.
    
 **Additional Requirements**
 

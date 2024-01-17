@@ -23,7 +23,8 @@
 using namespace std;
 
 
-/** Set default constructor
+/** @brief Set default constructor
+ *
  * Default constructor for set class. By default we construct
  * an empty set.
  */
@@ -35,13 +36,23 @@ Set::Set()
 }
 
 
-/** check if set is empty
+/** @brief check if set is empty
+ *
  * Check if the set is empty or not.  Return true for a currently empty
  * set and false if the set is not empty.
  *
  * @returns bool True when the set is empty, false when it is not empty.
  */
 
+
+/** @brief get set size
+ *
+ * Return the current size of the set, e.g. the number of items currently
+ * present in this set.
+ *
+ * @returns int Returns the count of the number of items currently in the
+ *   set.
+ */
 
 /** contains item
  * Check whether an item is present in the set or not.
@@ -53,7 +64,8 @@ Set::Set()
  */
 
 
-/** convert to string
+/** @brief convert to string
+ *
  * Create and return a string representation of the current set items.
  * It might be nice to return the items in sorted order, to make it easier
  * on the class user to understand the items in and not in the set.  However,
@@ -65,16 +77,8 @@ Set::Set()
  */
 
 
-/** get set size
- * Return the current size of the set, e.g. the number of items currently
- * present in this set.
+/** @brief add item to set
  *
- * @returns int Returns the count of the number of items currently in the
- *   set.
- */
-
-
-/** add item to set
  * Add a new item given as a parameter to our set of items.  This is a set,
  * So we do nothing if the item is already in the set.
  *
@@ -82,7 +86,8 @@ Set::Set()
  */
 
 
-/** remove item from set
+/** @brief remove item from set
+ *
  * Remove the indicated item.  If the item is not in the set, this method
  * ignores the request and silently does nothing.  Otherwise if the item
  * is present, we remove it and update our array of items, shifting items
@@ -92,7 +97,8 @@ Set::Set()
  */
 
 
-/** set union operation
+/** @brief set union operation
+ *
  * Calculate the union of this set with an otherSet.  The union of two setns
  * contains all values found in either this set or the other set (or in
  * both).  In many ways the set union is the
@@ -101,7 +107,8 @@ Set::Set()
  * be done simply by adding all of the items of the otherSet given to this
  * set.
  *
- * @param otherSet The other set to perform the union with.
+ * @param otherSet The other set to perform the union with.  This is
+ *   passed in as a const reference parameter to the other set.
  *
  * @returns void No result is returned explicitly.  But implicitly this set
  *   is modified and on return it will now contain the union of the two
@@ -109,7 +116,8 @@ Set::Set()
  */
 
 
-/** set intersection operation
+/** @brief set intersection operation
+ *
  * Calculate the intersection of this set with the otherSet we
  * are given.  The intersection of two sets are the values that are present
  * in both this set and the otherSet.  We would normally create a new
@@ -125,7 +133,8 @@ Set::Set()
  * not also in the other set.  We iterate in reverse so we can call
  * removeItem() to do the actual remove of items that are not intersection.
  *
- * @param otherSet The other set to perform intersection with.
+ * @param otherSet The other set to perform intersection with.  This is passed
+ *   in as a const reference parameter to the other set.
  *
  * @returns void No result is returned explicitly.  But implicitly the set
  *   is modified and on return it will now contain the intersection of
