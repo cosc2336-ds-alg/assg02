@@ -20,33 +20,42 @@
 #include <iostream>
 using namespace std;
 
+#undef task1_1
+#undef task1_2
+#undef task1_3
+#undef task1_4
+#undef task2
+#undef task3
+#undef task4
+#undef task5
+#undef task6
 
 /** Task 1: Set default constructor, needs implement of stub isEmpty()
  * to test.
  * Uncomment the following test case block and write your code
  * to pass these tests for these parts of the assignment.
  */
-/*
+#ifdef task1_1
 TEST_CASE("<isEmpty> stub function test", "[task1]")
 {
   Set s;
   
   CHECK(s.isEmpty());
 }
-*/
+#endif
 
 /** Task 1: Set getSetSize stub accessor method
  * Uncomment the following test case block and write your code
  * to pass these tests for these parts of the assignment.
  */
-/*
+#ifdef task1_2
 TEST_CASE("<getSetSize> stub function test", "[task1]")
 {
   Set s;
   
   CHECK(s.getSetSize() == 0);
 }
-*/
+#endif
 
 /** Task 1: Set containsItem stub accessor method.  The set is still empty,
  * So any item we check should give a false result as it should
@@ -54,7 +63,7 @@ TEST_CASE("<getSetSize> stub function test", "[task1]")
  * Uncomment the following test case block and write your code
  * to pass these tests for these parts of the assignment.
  */
-/*
+#ifdef task1_3
 TEST_CASE("<containsItem> stub function test", "[task1]")
 {
   Set s;
@@ -64,21 +73,21 @@ TEST_CASE("<containsItem> stub function test", "[task1]")
   CHECK_FALSE(s.containsItem(9));
   CHECK_FALSE(s.containsItem(0));
 }
-*/
+#endif
 
 /** Task 1: Set str stub method.  The set is still empty,
  * So we should get an empty string as a result
  * Uncomment the following test case block and write your code
  * to pass these tests for these parts of the assignment.
  */
-/*
+#ifdef task1_4
 TEST_CASE("<str> stub function test", "[task1]")
 {
   Set s;
   
   CHECK(s.str() == "[ ]");
 }
-*/
+#endif
 
 /** Task 2: addItem tests
  * Our first real test of the set.  Lets add some items and
@@ -88,7 +97,7 @@ TEST_CASE("<str> stub function test", "[task1]")
  * Uncomment the following test case block and write your code
  * to pass these tests for these parts of the assignment.
  */
-/*
+#ifdef task2
 TEST_CASE("<addItem> test adding items and implementation of stub functions", "[task2]")
 {
   Set s;
@@ -122,7 +131,7 @@ TEST_CASE("<addItem> test adding items and implementation of stub functions", "[
     CHECK(s.str() == "[ 5 9 -1 42 ]"); // we are expecting an unsorted set of items here
   }
 }
-*/
+#endif
 
 /** Task 3: test addItem duplicate items
  * This is a set, so adding existing items should not cause the set to
@@ -131,7 +140,7 @@ TEST_CASE("<addItem> test adding items and implementation of stub functions", "[
  * Uncomment the following test case block and write your code
  * to pass these tests for these parts of the assignment.
  */
-/*
+#ifdef task3
 TEST_CASE("<addItem> test adding duplicate items", "[task3]")
 {
   Set s;
@@ -186,14 +195,14 @@ TEST_CASE("<addItem> test adding duplicate items", "[task3]")
     CHECK(s.str() == "[ 5 9 -1 42 ]");
   }
 }
-*/
+#endif
 
 /** Task 4: removeItems tests
  * Test that removeItems is working.
  * Uncomment the following test case block and write your code
  * to pass these tests for these parts of the assignment.
  */
-/*
+#ifdef task4
 TEST_CASE("<removeItem> test removing items from set", "[task4]")
 {
   Set s;
@@ -284,7 +293,7 @@ TEST_CASE("<removeItem> test removing items from set", "[task4]")
     CHECK(s.str() == "[ ]");
   }
 }
-*/
+#endif
 
 
 /** A test fixture is a common Unit Test concept.  Basically catch2 will
@@ -294,7 +303,7 @@ TEST_CASE("<removeItem> test removing items from set", "[task4]")
  *
  * Uncomment this before working on the final Tasks 5 and 6
  */
-/*
+#ifdef task5
 struct SetTestFixture
 {
 public:
@@ -331,14 +340,14 @@ public:
     s2ends.addItem(18);
   }    
 };
-*/
+#endif
 
 /** Task 5: operatorUnion tests
  * Test that the union operation on sets works correctly.
  * Uncomment the following test case block and write your code
  * to pass these tests for these parts of the assignment.
  */
-/*
+#ifdef task5
 TEST_CASE_METHOD(SetTestFixture,
                  "<operatorUnion> basic test", "[task5]")
 {
@@ -363,14 +372,14 @@ TEST_CASE_METHOD(SetTestFixture,
     CHECK(s2.str() == "[ 8 4 -6 18 ]");
   }
 }
-*/
+#endif
 
 /** Task 5: operatorUnion tests
  * Test that the union operation on sets works correctly.
  * Uncomment the following test case block and write your code
  * to pass these tests for these parts of the assignment.
  */
-/*
+#ifdef task5
 TEST_CASE_METHOD(SetTestFixture,
                  "<operatorUnion> test the other way", "[task5]")
 {
@@ -395,14 +404,14 @@ TEST_CASE_METHOD(SetTestFixture,
     CHECK(s1.str() == "[ 5 8 -6 12 ]");
   }
 }
-*/
+#endif
 
 /** Task 5: operatorUnion tests
  * Test that the union operation on sets works correctly.
  * Uncomment the following test case block and write your code
  * to pass these tests for these parts of the assignment.
  */
-/*
+#ifdef task5
 TEST_CASE_METHOD(SetTestFixture,
                  "<operatorUnion> test union with empty set", "[task5]")
 {
@@ -432,14 +441,14 @@ TEST_CASE_METHOD(SetTestFixture,
     CHECK(empty.getSetSize() == 0);
   }
 }
-*/
+#endif
 
 /** Task 5: operatorUnion tests
  * Test that the union operation on sets works correctly.
  * Uncomment the following test case block and write your code
  * to pass these tests for these parts of the assignment.
  */
-/*
+#ifdef task5
 TEST_CASE_METHOD(SetTestFixture,
                  "<operatorUnion> test union with same set", "[task5]")
 {
@@ -472,14 +481,14 @@ TEST_CASE_METHOD(SetTestFixture,
     CHECK(sameAsS1.str() == "[ 5 8 -6 12 ]");
   }
 }
-*/
+#endif
 
 /** Task 5: operatorUnion tests
  * Test that the union operation on sets works correctly.
  * Uncomment the following test case block and write your code
  * to pass these tests for these parts of the assignment.
  */
-/*
+#ifdef task5
 TEST_CASE_METHOD(SetTestFixture,
                  "<operatorUnion> test union of end values", "[task5]")
 {
@@ -513,14 +522,14 @@ TEST_CASE_METHOD(SetTestFixture,
     CHECK(s2ends.str() == "[ 8 18 4 -6 ]");
   }
 }
-*/
+#endif
 
 /** Task 6: operatorIntersect tests
  * Test that the intersection operation on sets works correctly.
  * Uncomment the following test case block and write your code
  * to pass these tests for these parts of the assignment.
  */
-/*
+#ifdef task6
 TEST_CASE_METHOD(SetTestFixture,
                  "<operatorIntersect> basic test", "[task6]")
 {
@@ -543,14 +552,14 @@ TEST_CASE_METHOD(SetTestFixture,
     CHECK(s2.str() == "[ 8 4 -6 18 ]");
   }
 }
-*/
+#endif
 
 /** Task 6: operatorIntersect tests
  * Test that the intersection operation on sets works correctly.
  * Uncomment the following test case block and write your code
  * to pass these tests for these parts of the assignment.
  */
-/*
+#ifdef task6
 TEST_CASE_METHOD(SetTestFixture,
                  "<operatorIntersect> test the other way", "[task6]")
 {
@@ -573,14 +582,14 @@ TEST_CASE_METHOD(SetTestFixture,
     CHECK(s1.str() == "[ 5 8 -6 12 ]");
   }
 }
-*/
+#endif
 
 /** Task 6: operatorIntersect tests
  * Test that the intersection operation on sets works correctly.
  * Uncomment the following test case block and write your code
  * to pass these tests for these parts of the assignment.
  */
-/*
+#ifdef task6
 TEST_CASE_METHOD(SetTestFixture,
                  "<operatorIntersect> test intersection empty set", "[task6]")
 {
@@ -600,14 +609,14 @@ TEST_CASE_METHOD(SetTestFixture,
     CHECK(empty.getSetSize() == 0);
   }
 }
-*/
+#endif
 
 /** Task 6: operatorIntersect tests
  * Test that the intersection operation on sets works correctly.
  * Uncomment the following test case block and write your code
  * to pass these tests for these parts of the assignment.
  */
-/*
+#ifdef task6
 TEST_CASE_METHOD(SetTestFixture,
                  "<operatorIntersect> test intersection with same set", "[task6]")
 {
@@ -640,14 +649,14 @@ TEST_CASE_METHOD(SetTestFixture,
     CHECK(sameAsS1.str() == "[ 5 8 -6 12 ]");
   }
 }
-*/
+#endif
 
 /** Task 6: operatorIntersect tests
  * Test that the intersection operation on sets works correctly.
  * Uncomment the following test case block and write your code
  * to pass these tests for these parts of the assignment.
  */
-/*
+#ifdef task6
 TEST_CASE_METHOD(SetTestFixture,
                  "<operatorIntersect> test intersection of end values", "[task6]")
 {
@@ -681,4 +690,4 @@ TEST_CASE_METHOD(SetTestFixture,
     CHECK(s2ends.str() == "[ 8 18 ]");
   }
 }
-*/
+#endif
